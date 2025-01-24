@@ -1,0 +1,15 @@
+version: "3.8"
+services:
+  web-server:
+    build: ./web-server
+    ports:
+      - "3000:3000"
+    depends_on:
+      - analytics-server
+    environment:
+      - ANALYTICS_SERVICE_URL=http://analytics-server:4000
+
+  analytics-server:
+    build: ./analytics-server
+    ports:
+      - "4000:4000"

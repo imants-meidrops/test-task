@@ -1,0 +1,41 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: #e6e6e6;
+  --foreground: #000000;
+}
+
+body {
+  color: var(--foreground);
+  background: var(--background);
+}
+
+/* For smaller screens, display a horizontal video progress bar */
+@media (max-width: 768px) {
+  .progress-bar {
+    height: 2px;
+    width: 100%;
+    flex-direction: row;
+  }
+
+  .progress-segment {
+    width: 33%;
+    height: 100%;
+  }
+}
+
+/* For larger screens, display a vertical video progress bar */
+@media (min-width: 769px) {
+  .progress-bar {
+    width: 2px;
+    height: 100%;
+    flex-direction: column;
+  }
+
+  .progress-segment {
+    height: 33%;
+    width: 100%;
+  }
+}
