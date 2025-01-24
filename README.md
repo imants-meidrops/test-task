@@ -4,7 +4,7 @@ docker compose up --build
 
 To shut down both servers press CTRL + C in the terminal window
 
-The web server can then be access at http://localhost:3000
+The web server can then be accessed at http://localhost:3000
 There is only one page and it accepts a URL parameter, as such:
 http://localhost:3000/?goal=Break+100
 or
